@@ -93,6 +93,164 @@ body {
 .page {
 	flex: 1 1 auto;
 }
+
+
+.hero__container {
+	display: flex;
+	padding: 100px 0;
+
+
+	.hero__text {
+		flex-basis: 55%;
+		padding: 0 30px;
+		display: flex;
+		flex-direction: column;
+		
+		.hero__name {
+			font-size: 20px;
+			font-weight: 500;
+			line-height: 140%;
+			color: #4338CA;
+			padding-left: 100px;
+			position: relative;
+			margin-bottom: 40px;
+		}
+		.hero__name::before {
+			content: ' ';
+			display: block;
+			width: 90px;
+			border-top: 1px solid #4338CA;
+			position: absolute;
+			left: - 10px;
+			top: 50%
+		}
+		.hero__title {
+			font-weight: 700;
+			font-size: 73px;
+			line-height: 100%;
+			color: #000;
+			margin-bottom: 40px;
+		}
+		.hero__description {
+			font-weight: 400;
+			font-size: 18px;
+			line-height: 156%;
+			color: #6B7280;
+		}
+		.hero__btn_group {
+			display: flex;
+			padding: 40px 0;
+
+			input {
+				padding: 12px 32px;
+				border: 1px solid #3730A3;
+				border-radius: 6px;
+				margin-right: 20px;
+				font-weight: 500;
+				font-size: 18px;
+				line-height: 156%;
+				cursor: pointer;
+				transition: all 0.3s ease;
+			}
+			.hire_me__btn {
+				background-color: #3730A3;
+				color: #fff;
+
+				&:hover {
+					background-color: #fff;
+					color: #3730A3;
+				}
+			}
+			.read_more__btn {
+				color: #3730A3;
+				background-color: #fff;
+
+				&:hover {
+					background-color: #3730A3;
+					color: #fff;
+				}
+			}
+
+		}
+		.hero__sub_description {
+			font-weight: 400;
+			font-size: 12px;
+			line-height: 133%;
+			color: #6B7280;
+		}
+
+	}
+
+	.hero__img {
+		flex-basis: 45%;
+		padding: 0 35px;
+
+		img {
+			width: 100%;
+		}
+	}
+
+}
+
+
+@media (max-width: 1262px) {
+	.hero__container {
+		.hero__text {
+			.hero__title {
+				font-size: calc(20px + (50 - 20)*((100vw - 320px)/(1250 - 320)));
+			}
+			.hero__description {
+				font-size: calc(12px + (18 - 12)*((100vw - 320px)/(1250 - 320)));
+			}
+				
+		}
+	}
+	
+}
+// ========== DESCkTOP ============================================================================================
+@media (max-width: $md1 + px){
+	.hero__container {
+		.hero__text {
+			.hero__title {
+				margin-bottom: 20px;
+			}
+			// .hero__description {
+			// 	margin-bottom: 20px;
+			// }
+			.hero__btn_group {
+				padding: 20px 0;
+			}
+				
+		}
+	}
+}
 //===================================================================================================================================
+
+//========= MOBILE ====================================================================================================
+@media (max-width: 767px) {
+	.hero__container {
+		flex-direction: column;
+		padding: 130px 0 50px;
+
+		.hero__text {
+			padding-bottom: 20px;
+			.hero__name {
+				font-size: 25px;
+				z-index: -1;
+			}
+			.hero__title {
+				font-size: 35px;
+			}
+			// br {
+			// 	display:none;
+			// }
+		}
+		.hero__img {
+			width: 60%;
+			margin: 0 auto;
+			
+		}
+	}
+}
 
 //</ОСНОВНОЙ БЛОК>====================================================================================================
