@@ -246,6 +246,7 @@ body {
 					line-height: 133%;
 					color: #3730A3;
 					margin-top: auto;
+					margin-bottom: 50px;
 				}
 			}
 		}
@@ -268,7 +269,7 @@ body {
 
 	.project__container {
 		.project__title {
-			font-size: calc(18px + (48 - 18)*((100vw - 320px)/(1250 - 320)));
+			font-size: calc(20px + (48 - 20)*((100vw - 320px)/(1250 - 320)));
 		}
 	}
 	
@@ -346,6 +347,42 @@ body {
 			width: 60%;
 			margin: 0 auto;
 			
+		}
+	}
+	.project__container {
+			background-image: url("../img/icons/image\ 11.png");
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: cover;
+		.project__title {
+			padding-top: 20px;
+		}
+		.project__example {
+			
+			
+			.example_img {
+				display: none;
+			}
+			.example__list {
+				padding: 30px 20px 30px 0;
+				flex-basis: 100%;
+				background-color: rgba($color: #fff, $alpha: 0.5);
+			}
+		}
+	}
+}
+
+@media (max-width: 500px) {
+	.project__container {
+		padding-bottom: 70px;
+		.project__example {
+			.example__list {
+				flex-direction: column;
+				flex-wrap: nowrap;
+				.list__item {
+					flex-basis: 100%;
+				}
+			}
 		}
 	}
 }
