@@ -31,7 +31,7 @@ $md2: 991.98;
 $md3: 767.98;
 $md4: 479.98;
 
-$mainColor: #000;
+$mainColor: #1F2937;
 
 //</ПЕРЕМЕННЫЕ>===========================================================================================================
 
@@ -193,6 +193,66 @@ body {
 }
 
 
+
+.project__container{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0 30px 150px;
+
+	.project__title {
+		display: block;
+		font-size: 48px;
+		font-weight: 600;
+		padding: 100px 70px;
+		text-align: center;
+		line-height: 100%;
+
+		.color_text {
+			color: #3730A3;
+		}
+	}
+	.project__example {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+
+		.example__list {
+			display: flex;
+			flex-wrap: wrap;
+			padding: 50px 0 30px;
+
+			.list__item {
+				flex-basis: 50%;
+				padding: 0 0 0 50px;
+				display: flex;
+				flex-direction: column;
+
+				.list__title {
+					font-weight: 600;
+					font-size: 18px;
+					line-height: 156%;
+				}
+				.list__description {
+					margin: 20px 0;
+					font-weight: 400;
+					font-size: 12px;
+					line-height: 133%;
+					color: #6B7280;
+				}
+				.list_btn {
+					font-weight: 500;
+					font-size: 12px;
+					line-height: 133%;
+					color: #3730A3;
+					margin-top: auto;
+				}
+			}
+		}
+	}
+}
+
+// =========== RESPONSIVE FONT-SIE =================================================================================
 @media (max-width: 1262px) {
 	.hero__container {
 		.hero__text {
@@ -205,6 +265,12 @@ body {
 				
 		}
 	}
+
+	.project__container {
+		.project__title {
+			font-size: calc(18px + (48 - 18)*((100vw - 320px)/(1250 - 320)));
+		}
+	}
 	
 }
 // ========== DESCkTOP ============================================================================================
@@ -214,13 +280,46 @@ body {
 			.hero__title {
 				margin-bottom: 20px;
 			}
-			// .hero__description {
-			// 	margin-bottom: 20px;
-			// }
 			.hero__btn_group {
 				padding: 20px 0;
 			}
 				
+		}
+	}
+
+	.project__container {
+		.project__title {
+			padding: 0 0 50px 0;
+			br {
+				display: none;
+			}
+		}
+		.project__example {
+			.example_img {
+				width: 50%;
+
+				img{
+					width: 100%;
+				}
+			}
+			.example__list {
+				width: 50%;
+				padding: 0;
+
+				.list__item {
+					padding: 0 0 0 20px;
+
+					.list__description{
+						padding: 5px 0;
+						margin: 0;
+					}
+
+					.list_btn {
+						margin-bottom: 10px;
+					}
+				}
+				
+			}
 		}
 	}
 }
@@ -241,9 +340,7 @@ body {
 			.hero__title {
 				font-size: 35px;
 			}
-			// br {
-			// 	display:none;
-			// }
+
 		}
 		.hero__img {
 			width: 60%;

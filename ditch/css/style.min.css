@@ -122,7 +122,7 @@ h6 {
 }
 */
 body {
-  color: #000;
+  color: #1F2937;
 }
 body._lock {
   overflow: hidden;
@@ -1033,12 +1033,69 @@ body.ie ._ibg img {
   width: 100%;
 }
 
+.project__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 30px 150px;
+}
+.project__container .project__title {
+  display: block;
+  font-size: 48px;
+  font-weight: 600;
+  padding: 100px 70px;
+  text-align: center;
+  line-height: 100%;
+}
+.project__container .project__title .color_text {
+  color: #3730A3;
+}
+.project__container .project__example {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.project__container .project__example .example__list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px 0 30px;
+}
+.project__container .project__example .example__list .list__item {
+  flex-basis: 50%;
+  padding: 0 0 0 50px;
+  display: flex;
+  flex-direction: column;
+}
+.project__container .project__example .example__list .list__item .list__title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 156%;
+}
+.project__container .project__example .example__list .list__item .list__description {
+  margin: 20px 0;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 133%;
+  color: #6B7280;
+}
+.project__container .project__example .example__list .list__item .list_btn {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 133%;
+  color: #3730A3;
+  margin-top: auto;
+}
+
 @media (max-width: 1262px) {
   .hero__container .hero__text .hero__title {
     font-size: calc(20px + 30 * (100vw - 320px) / 930);
   }
   .hero__container .hero__text .hero__description {
     font-size: calc(12px + 6 * (100vw - 320px) / 930);
+  }
+
+  .project__container .project__title {
+    font-size: calc(18px + 30 * (100vw - 320px) / 930);
   }
 }
 @media (max-width: 1262px) {
@@ -1047,6 +1104,33 @@ body.ie ._ibg img {
   }
   .hero__container .hero__text .hero__btn_group {
     padding: 20px 0;
+  }
+
+  .project__container .project__title {
+    padding: 0 0 50px 0;
+  }
+  .project__container .project__title br {
+    display: none;
+  }
+  .project__container .project__example .example_img {
+    width: 50%;
+  }
+  .project__container .project__example .example_img img {
+    width: 100%;
+  }
+  .project__container .project__example .example__list {
+    width: 50%;
+    padding: 0;
+  }
+  .project__container .project__example .example__list .list__item {
+    padding: 0 0 0 20px;
+  }
+  .project__container .project__example .example__list .list__item .list__description {
+    padding: 5px 0;
+    margin: 0;
+  }
+  .project__container .project__example .example__list .list__item .list_btn {
+    margin-bottom: 10px;
   }
 }
 @media (max-width: 767px) {
