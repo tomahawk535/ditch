@@ -381,6 +381,40 @@ body {
 	}
 }
 
+.services__container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 150px 0;
+
+	.services__item {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		text-align: center;
+		margin-right: 10px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		.services__title {
+			padding: 40px 0 20px;
+			font-weight: 600;
+			font-size: 30px;
+			line-height: 120%;
+		}
+		.services__description {
+			font-weight: 400;
+			font-size: 18px;
+			line-height: 156%;
+			color: #9CA3AF;
+		}
+
+	}
+}
+
 ._touch {
 	.feed__container {
 		.feed__projects {
@@ -531,6 +565,15 @@ body {
 				flex-basis: 100%;
 				background-color: rgba($color: #fff, $alpha: 0.5);
 			}
+		}
+	}
+
+	.services__container {
+		flex-direction: column;
+		padding: 70px 0;
+
+		.services__item {
+			margin: 5px 0 5px 0;
 		}
 	}
 }
