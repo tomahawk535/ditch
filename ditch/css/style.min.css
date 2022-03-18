@@ -1233,6 +1233,54 @@ body.ie ._ibg img {
   color: #9CA3AF;
 }
 
+.careers__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 0 150px 0;
+}
+.careers__container .careers__title {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 100%;
+  margin-bottom: 150px;
+}
+.careers__container .careers__table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.careers__container .careers__table .table__headers {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 40px;
+}
+.careers__container .careers__table .table__headers .headers__name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: #6B7280;
+  text-transform: uppercase;
+}
+.careers__container .careers__table .table__list {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 0;
+}
+.careers__container .careers__table .table__list:last-child {
+  margin: 40px 0 0 0;
+}
+.careers__container .careers__table .table__list .list__item {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #6B7280;
+}
+.careers__container .careers__table .table__list .list__item span {
+  color: #1F2937;
+  font-weight: 600;
+}
+
 ._touch .feed__container .feed__projects .project__item .project__title {
   display: flex;
   align-items: center;
@@ -1252,6 +1300,10 @@ body.ie ._ibg img {
   }
 
   .feed__container .feed__title {
+    font-size: calc(20px + 28 * (100vw - 320px) / 930);
+  }
+
+  .careers__container .careers__title {
     font-size: calc(20px + 28 * (100vw - 320px) / 930);
   }
 }
@@ -1296,6 +1348,22 @@ body.ie ._ibg img {
 
   .feed__container .feed__title {
     margin: 70px 20px;
+  }
+
+  .careers__container {
+    padding: 30px 30px;
+  }
+  .careers__container .careers__title {
+    margin-bottom: 50px;
+  }
+  .careers__container .careers__table .table__headers {
+    padding-bottom: 30px;
+  }
+  .careers__container .careers__table .table__list {
+    margin: 10px 0;
+  }
+  .careers__container .careers__table .table__list:last-child {
+    margin: 10px 0 0 0;
   }
 }
 @media (max-width: 767px) {
@@ -1342,6 +1410,23 @@ body.ie ._ibg img {
   }
   .services__container .services__item {
     margin: 5px 0 5px 0;
+    padding: 0 30px;
+  }
+
+  .careers__container {
+    padding: 30px 30px;
+  }
+  .careers__container .careers__title {
+    margin-bottom: 50px;
+  }
+  .careers__container .careers__table .table__headers {
+    padding-bottom: 30px;
+  }
+  .careers__container .careers__table .table__list {
+    margin: 10px 0;
+  }
+  .careers__container .careers__table .table__list:last-child {
+    margin: 10px 0 0 0;
   }
 }
 @media (max-width: 500px) {
@@ -1380,5 +1465,12 @@ body.ie ._ibg img {
   }
   .feed__container .feed__projects .project__item .project__title {
     padding: 10px;
+  }
+
+  .careers__container .careers__table .table__list .list__item {
+    margin-right: 5px;
+  }
+  .careers__container .careers__table .table__list .list__item:last-child {
+    margin-right: 0;
   }
 }

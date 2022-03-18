@@ -415,6 +415,63 @@ body {
 	}
 }
 
+.careers__container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0 0 150px 0;
+
+
+	.careers__title	{
+		font-weight: 600;
+		font-size: 48px;
+		line-height: 100%;
+		margin-bottom: 150px;
+	}
+	.careers__table {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		
+		.table__headers {
+			display: flex;
+			justify-content: space-between;
+			padding-bottom: 40px;
+
+			.headers__name {
+				font-weight: 500;
+				font-size: 16px;
+				line-height: 150%;
+				color: #6B7280;
+				text-transform: uppercase;
+			}
+			
+		}
+		.table__list {
+			display: flex;
+			justify-content: space-between;
+			margin: 40px 0;
+
+			&:last-child {
+				margin: 40px 0 0 0;
+			}
+
+			.list__item {
+				font-weight: 400;
+				font-size: 16px;
+				line-height: 150%;
+				color: #6B7280;
+
+				span {
+					color: #1F2937;
+					font-weight: 600;
+				}
+			}
+		}
+	}
+	
+}
+
 ._touch {
 	.feed__container {
 		.feed__projects {
@@ -442,7 +499,6 @@ body {
 				
 		}
 	}
-
 	.project__container {
 		.project__title {
 			font-size: calc(20px + (48 - 20)*((100vw - 320px)/(1250 - 320)));
@@ -453,9 +509,14 @@ body {
 			font-size: calc(20px + (48 - 20)*((100vw - 320px)/(1250 - 320)));
 		}
 	}
+	.careers__container {
+		.careers__title {
+			font-size: calc(20px + (48 - 20)*((100vw - 320px)/(1250 - 320)));
+		}
+	}
 	
 }
-// ========== DESCkTOP ============================================================================================
+// ========== TABLET ============================================================================================
 @media (max-width: $md1 + px){
 	.hero__container {
 		.hero__text {
@@ -518,6 +579,26 @@ body {
 			margin: 70px 20px;
 		}
 	}
+	.careers__container {
+		padding:  30px 30px;
+
+		.careers__title {
+			margin-bottom: 50px;
+		}
+
+		.careers__table {
+			.table__headers {
+				padding-bottom: 30px;
+			}
+			.table__list {
+				margin: 10px 0;
+
+				&:last-child {
+					margin: 10px 0 0 0;
+				}
+			}
+		}
+	}
 
 
 }
@@ -574,6 +655,28 @@ body {
 
 		.services__item {
 			margin: 5px 0 5px 0;
+			padding: 0 30px;
+		}
+	}
+
+	.careers__container {
+		padding:  30px 30px;
+
+		.careers__title {
+			margin-bottom: 50px;
+		}
+
+		.careers__table {
+			.table__headers {
+				padding-bottom: 30px;
+			}
+			.table__list {
+				margin: 10px 0;
+
+				&:last-child {
+					margin: 10px 0 0 0;
+				}
+			}
 		}
 	}
 }
@@ -627,6 +730,19 @@ body {
 			}			
 		}
 		
+	}
+	.careers__container {
+		.careers__table {
+			.table__list {
+				.list__item {
+					margin-right: 5px;
+
+					&:last-child{
+						margin-right: 0;
+					}
+				}
+			}
+		}
 	}
 
 	
